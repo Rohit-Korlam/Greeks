@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <chrono>
+#include <ctime>
 enum INSTRUMENT {
     STK_IDX,
     FUT_IDX,
@@ -14,7 +16,7 @@ enum OPTION_TYPE{
 struct CONTRACT_DESC{
     std::string underlying;
     uint32_t strike_price;
-    double expiry;
+    uint64_t expiry;
     uint32_t lot_size;
 };
 class ProductInfo {
